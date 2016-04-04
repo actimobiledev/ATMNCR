@@ -6,15 +6,17 @@
     android:orientation="horizontal">
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <TextView
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp">
+        <actiknow.com.atmncr.utils.CustomFontTextView
             android:id="@+id/tvLastAuditDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:text="12/03/2016"
             android:textSize="14sp"/>
-        <TextView
+        <actiknow.com.atmncr.utils.CustomFontTextView
             android:id="@+id/tvAtmUniqueId"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -22,7 +24,7 @@
             android:layout_centerHorizontal="true"
             android:text="HDFC0921212312"
             android:textSize="14sp"/>
-        <TextView
+        <actiknow.com.atmncr.utils.CustomFontTextView
             android:id="@+id/tvBankName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -32,7 +34,7 @@
             android:layout_marginRight="16dp"
             android:text="HDFC"
             android:textSize="14sp"/>
-        <TextView
+        <actiknow.com.atmncr.utils.CustomFontTextView
             android:id="@+id/tvAddress"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -42,7 +44,7 @@
             android:layout_marginRight="16dp"
             android:text="SECTOR 21, DWARKA"
             android:textSize="14sp"/>
-        <TextView
+        <actiknow.com.atmncr.utils.CustomFontTextView
             android:id="@+id/tvPincode"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -52,7 +54,7 @@
             android:layout_marginRight="16dp"
             android:text="110075"
             android:textSize="14sp"/>
-        <TextView
+        <actiknow.com.atmncr.utils.CustomFontTextView
             android:id="@+id/tvCity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

@@ -60,11 +60,11 @@ public class AllAtmAdapter extends BaseAdapter {
 
 		// title
 		atm_last_audit_date.setText (atm.getAtm_last_audit_date ());
-		atm_atm_unique_id.setText (atm.getAtm_unique_id ());
-		atm_bank_name.setText (atm.getAtm_bank_name ());
-		atm_address.setText (atm.getAtm_address ());
-		atm_city.setText (atm.getAtm_city ());
-		atm_pincode.setText (atm.getAtm_pincode ());
+		atm_atm_unique_id.setText (atm.getAtm_unique_id ().toUpperCase ());
+		atm_bank_name.setText (atm.getAtm_bank_name ().toUpperCase ());
+		atm_address.setText (atm.getAtm_address ().toUpperCase ());
+		atm_city.setText (atm.getAtm_city ().toUpperCase ());
+		atm_pincode.setText (atm.getAtm_pincode ().toUpperCase ());
 
 
 		convertView.setOnClickListener (new View.OnClickListener () {

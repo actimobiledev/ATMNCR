@@ -60,7 +60,7 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="@color/text_color_white"
             android:visibility="gone"/>
-        <TextView
+        <actiknow.com.atmncr.utils.CustomFontTextView
             android:id="@+id/tvAuditStatus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -72,7 +72,7 @@
             android:layout_marginTop="5dp"
             android:text="AUDIT STATUS"
             android:textSize="14sp"/>
-        <TextView
+        <actiknow.com.atmncr.utils.CustomFontTextView
             android:id="@+id/tvBank"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -109,6 +109,6 @@
             android:background="@color/colorPrimary"
             android:choiceMode="singleChoice"
             android:divider="@color/color_divider"
-            android:dividerHeight="0dp"/>
+            android:dividerHeight="3dp"/>
     </RelativeLayout>
 </android.support.v4.widget.DrawerLayout>
