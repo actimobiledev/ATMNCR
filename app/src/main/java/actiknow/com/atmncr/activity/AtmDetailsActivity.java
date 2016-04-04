@@ -24,7 +24,6 @@ import com.android.volley.toolbox.StringRequest;
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.api.GoogleApiClient;
-import com.squareup.picasso.Picasso;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -90,16 +89,7 @@ public class AtmDetailsActivity extends AppCompatActivity {
                                 is_data_received = 1;
                                 try {
                                     JSONObject jsonObj = new JSONObject (response);
-                                    tvAtmName.setText (jsonObj.getString (AppConfigTags.ATM_NAME));
-                                    tvAtmBank.setText (jsonObj.getString (AppConfigTags.ATM_BANK));
-                                    tvAtmLocation.setText (jsonObj.getString (AppConfigTags.ATM_LOCATION));
 
-                                    Constants.atm_cctv_check = jsonObj.getInt (AppConfigTags.ATM_CCTV_CHECK);
-                                    Constants.atm_machine_check = jsonObj.getInt (AppConfigTags.ATM_MACHINE_CHECK);
-                                    Constants.atm_ac_check = jsonObj.getInt (AppConfigTags.ATM_AC_CHECK);
-                                    Constants.atm_guard_check = jsonObj.getInt (AppConfigTags.ATM_GUARD_CHECK);
-
-                                    Picasso.with (AtmDetailsActivity.this).load (jsonObj.getString (AppConfigTags.ATM_IMAGE)).into (ivAtmImage);
                             } catch (JSONException e) {
                                     e.printStackTrace ();
                                 }
@@ -337,16 +327,6 @@ public class AtmDetailsActivity extends AppCompatActivity {
                                 is_data_received = 1;
                                 try {
                                     JSONObject jsonObj = new JSONObject (response);
-                                    tvAtmName.setText (jsonObj.getString (AppConfigTags.ATM_NAME));
-                                    tvAtmBank.setText (jsonObj.getString (AppConfigTags.ATM_BANK));
-                                    tvAtmLocation.setText (jsonObj.getString (AppConfigTags.ATM_LOCATION));
-
-                                    Constants.atm_cctv_check = jsonObj.getInt (AppConfigTags.ATM_CCTV_CHECK);
-                                    Constants.atm_machine_check = jsonObj.getInt (AppConfigTags.ATM_MACHINE_CHECK);
-                                    Constants.atm_ac_check = jsonObj.getInt (AppConfigTags.ATM_AC_CHECK);
-                                    Constants.atm_guard_check = jsonObj.getInt (AppConfigTags.ATM_GUARD_CHECK);
-
-                                    Picasso.with (AtmDetailsActivity.this).load (jsonObj.getString (AppConfigTags.ATM_IMAGE)).into (ivAtmImage);
                                 } catch (JSONException e) {
                                     e.printStackTrace ();
                                 }

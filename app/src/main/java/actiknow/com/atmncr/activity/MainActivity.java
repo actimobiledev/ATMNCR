@@ -110,7 +110,6 @@ public class MainActivity extends AppCompatActivity implements LocationListener,
             public void run () {
                 if (splash != null)
                     splash.dismiss ();
-                //Do something after 100ms
             }
         }, 3000);
 
@@ -139,10 +138,12 @@ public class MainActivity extends AppCompatActivity implements LocationListener,
                                         JSONObject jsonObject = jsonArray.getJSONObject (i);
                                         Atms atm = new Atms ();
                                         atm.setAtm_id (jsonObject.getInt (AppConfigTags.ATM_ID));
-                                        atm.setAtm_name (jsonObject.getString (AppConfigTags.ATM_NAME));
-                                        atm.setAtm_bank (jsonObject.getString (AppConfigTags.ATM_BANK));
-                                        atm.setAtm_location (jsonObject.getString (AppConfigTags.ATM_LOCATION));
-                                        atm.setAtm_image (jsonObject.getString (AppConfigTags.ATM_IMAGE));
+                                        atm.setAtm_unique_id (jsonObject.getString (AppConfigTags.ATM_UNIQUE_ID));
+                                        atm.setAtm_last_audit_date (jsonObject.getString (AppConfigTags.ATM_LAST_AUDIT_DATE));
+                                        atm.setAtm_bank_name (jsonObject.getString (AppConfigTags.ATM_BANK_NAME));
+                                        atm.setAtm_address (jsonObject.getString (AppConfigTags.ATM_ADDRESS));
+                                        atm.setAtm_city (jsonObject.getString (AppConfigTags.ATM_CITY));
+                                        atm.setAtm_pincode (jsonObject.getString (AppConfigTags.ATM_PINCODE));
                                         atmsList.add (atm);
                                     }
                                 } catch (JSONException e) {

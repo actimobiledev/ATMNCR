@@ -2,22 +2,17 @@ package actiknow.com.atmncr.adapter;
 
 import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
-
-import com.squareup.picasso.Picasso;
+import android.widget.Toast;
 
 import java.util.List;
 
 import actiknow.com.atmncr.R;
-import actiknow.com.atmncr.activity.AtmDetailsActivity;
 import actiknow.com.atmncr.model.Atms;
-import actiknow.com.atmncr.utils.Constants;
 
 public class AllAtmAdapter extends BaseAdapter {
 	private Activity activity;
@@ -52,23 +47,24 @@ public class AllAtmAdapter extends BaseAdapter {
 		if (convertView == null)
 			convertView = inflater.inflate (R.layout.listview_item_atm, null);
 
-		ImageView atm_image = (ImageView) convertView.findViewById (R.id.ivAtmImage);
-		TextView atm_name = (TextView) convertView.findViewById (R.id.tvAtmName);
-		TextView atm_bank = (TextView) convertView.findViewById (R.id.tvBankName);
-		TextView atm_location = (TextView) convertView.findViewById (R.id.tvAtmLocation);
+		TextView atm_last_audit_date = (TextView) convertView.findViewById (R.id.tvLastAuditDate);
+		TextView atm_atm_unique_id = (TextView) convertView.findViewById (R.id.tvAtmUniqueId);
+		TextView atm_bank_name = (TextView) convertView.findViewById (R.id.tvBankName);
+		TextView atm_address = (TextView) convertView.findViewById (R.id.tvAddress);
+		TextView atm_city = (TextView) convertView.findViewById (R.id.tvCity);
+		TextView atm_pincode = (TextView) convertView.findViewById (R.id.tvPincode);
 
 		// getting movie data for the row
 		final Atms atm = atms.get(position);
 
-		// thumbnail image
-//		service_image.setImageUrl (s.getService_image (), imageLoader);
-		Picasso.with (activity).load (atm.getAtm_image ()).into (atm_image);
-		
-		// title
-		atm_name.setText(atm.getAtm_name ());
-		atm_bank.setText (atm.getAtm_bank ());
-		atm_location.setText (atm.getAtm_location ());
 
+		// title
+		atm_last_audit_date.setText (atm.getAtm_last_audit_date ());
+		atm_atm_unique_id.setText (atm.getAtm_unique_id ());
+		atm_bank_name.setText (atm.getAtm_bank_name ());
+		atm_address.setText (atm.getAtm_address ());
+		atm_city.setText (atm.getAtm_city ());
+		atm_pincode.setText (atm.getAtm_pincode ());
 
 
 		convertView.setOnClickListener (new View.OnClickListener () {
@@ -77,10 +73,11 @@ public class AllAtmAdapter extends BaseAdapter {
 
 			@Override
 			public void onClick (View arg0) {
-				Constants.atm_id = atm.getAtm_id ();
-				Intent intent = new Intent (activity, AtmDetailsActivity.class);
-				activity.startActivity (intent);
-				activity.overridePendingTransition (R.anim.slide_in_right, R.anim.slide_out_left);
+				Toast.makeText (activity, "atmid" + atm.getAtm_id (), Toast.LENGTH_SHORT).show ();
+//				Constants.atm_id = atm.getAtm_id ();
+//				Intent intent = new Intent (activity, AtmDetailsActivity.class);
+//				activity.startActivity (intent);
+//				activity.overridePendingTransition (R.anim.slide_in_right, R.anim.slide_out_left);
 			}
 		});
 		return convertView;

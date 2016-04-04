@@ -12,10 +12,12 @@ public class AppConfigTags {
 
 
     public static final String ATM_ID = "atm_id";
-    public static final String ATM_NAME = "atm_name";
-    public static final String ATM_BANK = "atm_bank";
-    public static final String ATM_LOCATION = "atm_location";
-    public static final String ATM_IMAGE = "atm_image";
+    public static final String ATM_UNIQUE_ID = "atm_unique_id";
+    public static final String ATM_LAST_AUDIT_DATE = "atm_last_audit_date";
+    public static final String ATM_BANK_NAME = "atm_bank_name";
+    public static final String ATM_ADDRESS = "atm_address";
+    public static final String ATM_CITY = "atm_city";
+    public static final String ATM_PINCODE = "atm_pincode";
 
     public static final String ATM_CCTV_CHECK = "atm_cctv_check";
     public static final String ATM_MACHINE_CHECK = "atm_machine_check";
