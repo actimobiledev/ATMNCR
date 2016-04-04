@@ -69,25 +69,20 @@ public class MainActivity extends AppCompatActivity implements LocationListener,
     ListView listViewAllAtms;
 
     GoogleApiClient client;
-    private List<Atms> atmsList = new ArrayList<Atms> ();
-    private AllAtmAdapter adapter;
+    GoogleApiClient googleApiClient;
+    Dialog splash;
 
     // Action Bar components
-
+    private List<Atms> atmsList = new ArrayList<Atms> ();
+    private AllAtmAdapter adapter;
     private ActionBarDrawerToggle mDrawerToggle;
     private DrawerLayout mDrawerLayout;
     private RelativeLayout mDrawerPanel;
-
-    GoogleApiClient googleApiClient;
-
-    Dialog splash;
 
     @Override
     protected void onCreate (Bundle savedInstanceState) {
         super.onCreate (savedInstanceState);
         setContentView (R.layout.activity_main);
-
-        LoginDetailsPref loginDetailsPref = LoginDetailsPref.getInstance ();
 
         initView ();
 
