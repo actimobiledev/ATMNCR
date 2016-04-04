@@ -14,7 +14,6 @@ import android.widget.Toast;
 
 import actiknow.com.atmncr.R;
 import actiknow.com.atmncr.utils.Constants;
-import actiknow.com.atmncr.utils.LoginDetailsPref;
 import actiknow.com.atmncr.utils.Utils;
 
 
@@ -95,10 +94,10 @@ public class LoginActivity extends AppCompatActivity {
                 int status_username = Utils.isValidEmail(Constants.username);
                 int status_password = Utils.isValidPassword (Constants.password);
                 if (status_username == 1 && status_password == 1 ) {
-                    if (Constants.username.equalsIgnoreCase("techdemo22@gmail.com") && Constants.password.equalsIgnoreCase("123456")) {
-                        LoginDetailsPref loginDetailsPref = LoginDetailsPref.getInstance();
-                        loginDetailsPref.putStringPref(LoginActivity.this, LoginDetailsPref.USERNAME, Constants.username);
-                        loginDetailsPref.putStringPref(LoginActivity.this, LoginDetailsPref.PASSWORD, Constants.password);
+                    if (Constants.username.equalsIgnoreCase ("admin@gmail.com") && Constants.password.equalsIgnoreCase ("123456")) {
+//                        LoginDetailsPref loginDetailsPref = LoginDetailsPref.getInstance();
+//                        loginDetailsPref.putStringPref(LoginActivity.this, LoginDetailsPref.USERNAME, Constants.username);
+//                        loginDetailsPref.putStringPref(LoginActivity.this, LoginDetailsPref.PASSWORD, Constants.password);
 
                         Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
