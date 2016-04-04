@@ -13,7 +13,6 @@
             android:id="@+id/tvLastAuditDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
             android:text="12/03/2016"
             android:textSize="14sp"/>
         <actiknow.com.atmncr.utils.CustomFontTextView
@@ -31,7 +30,6 @@
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentTop="true"
-            android:layout_marginRight="16dp"
             android:text="HDFC"
             android:textSize="14sp"/>
         <actiknow.com.atmncr.utils.CustomFontTextView
@@ -41,7 +39,6 @@
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_below="@+id/tvBankName"
-            android:layout_marginRight="16dp"
             android:text="SECTOR 21, DWARKA"
             android:textSize="14sp"/>
         <actiknow.com.atmncr.utils.CustomFontTextView
@@ -51,7 +48,6 @@
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_below="@+id/tvAddress"
-            android:layout_marginRight="16dp"
             android:text="110075"
             android:textSize="14sp"/>
         <actiknow.com.atmncr.utils.CustomFontTextView
@@ -62,7 +58,7 @@
             android:layout_marginRight="5dp"
             android:layout_toLeftOf="@+id/tvPincode"
             android:layout_toStartOf="@+id/tvPincode"
-            android:text="NEW DELHI" android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="NEW DELHI"
             android:textSize="14sp"/>
     </RelativeLayout>
 </RelativeLayout>
