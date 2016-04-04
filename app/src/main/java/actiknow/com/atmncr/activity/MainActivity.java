@@ -262,9 +262,9 @@ public class MainActivity extends AppCompatActivity implements LocationListener,
         try {
             assert actionBar != null;
             actionBar.setDisplayHomeAsUpEnabled (false);
-            actionBar.setHomeButtonEnabled (true);
+            actionBar.setHomeButtonEnabled (false);
             actionBar.setTitle (getResources ().getString (R.string.app_name));
-            actionBar.setDisplayShowTitleEnabled (true);
+            actionBar.setDisplayShowTitleEnabled (false);
         } catch (Exception ignored) {
         }
         ListView mDrawerListView = (ListView) findViewById (R.id.navDrawerList);
