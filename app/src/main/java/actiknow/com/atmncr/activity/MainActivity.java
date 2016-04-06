@@ -56,6 +56,7 @@ import actiknow.com.atmncr.adapter.AllAtmAdapter;
 import actiknow.com.atmncr.adapter.NavDrawerAdapter;
 import actiknow.com.atmncr.app.AppController;
 import actiknow.com.atmncr.model.Atms;
+import actiknow.com.atmncr.model.Questions;
 import actiknow.com.atmncr.utils.AppConfigTags;
 import actiknow.com.atmncr.utils.AppConfigURL;
 import actiknow.com.atmncr.utils.Constants;
@@ -179,6 +180,42 @@ public class MainActivity extends AppCompatActivity implements LocationListener,
                         }
                     });
                AppController.getInstance ().addToRequestQueue (strRequest);
+
+
+            Log.d ("URL", AppConfigURL.URL_GETALLQUESTIONS);
+            StringRequest strRequest1 = new StringRequest (Request.Method.POST, AppConfigURL.URL_GETALLQUESTIONS,
+                    new Response.Listener<String> () {
+                        @Override
+                        public void onResponse (String response) {
+                            Log.d ("SERVER RESPONSE", response);
+                            if (response != null) {
+                                try {
+                                    JSONObject jsonObj = new JSONObject (response);
+                                    JSONArray jsonArray = jsonObj.getJSONArray (AppConfigTags.QUESTIONS);
+                                    int json_array_len = jsonArray.length ();
+                                    for (int i = 0; i < json_array_len; i++) {
+                                        JSONObject jsonObject = jsonArray.getJSONObject (i);
+                                        Questions question = new Questions ();
+                                        question.setQuestion_id (jsonObject.getInt (AppConfigTags.QUESTION_ID));
+                                        question.setQuestion (jsonObject.getString (AppConfigTags.QUESTION));
+                                        Constants.questionsList.add (question);
+                                    }
+                                } catch (JSONException e) {
+                                    e.printStackTrace ();
+                                }
+                            } else {
+                                Log.e (AppConfigTags.SERVER_RESPONSE, AppConfigTags.DIDNT_RECEIVE_ANY_DATA_FROM_SERVER);
+                            }
+                        }
+                    },
+                    new Response.ErrorListener () {
+                        @Override
+                        public void onErrorResponse (VolleyError error) {
+                            Log.d ("TAG", error.toString ());
+                        }
+                    });
+            AppController.getInstance ().addToRequestQueue (strRequest1);
+
         }
 
     }

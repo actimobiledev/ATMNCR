@@ -1,5 +1,10 @@
 package actiknow.com.atmncr.utils;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import actiknow.com.atmncr.model.Questions;
+
 public class Constants {
     public static String username = "";
     public static String password = "";
@@ -21,4 +26,6 @@ public class Constants {
     public static int atm_checklist_item = 0;   //  0 => default, 1 => cctv, 2 => machine, 3 => ac, 4 => guard
 
     public static int splash_screen_first_time = 0; // 0 => default
+
+    public static List<Questions> questionsList = new ArrayList<Questions> ();
 }

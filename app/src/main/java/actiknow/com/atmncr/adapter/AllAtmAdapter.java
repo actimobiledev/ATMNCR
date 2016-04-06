@@ -2,16 +2,17 @@ package actiknow.com.atmncr.adapter;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.List;
 
 import actiknow.com.atmncr.R;
+import actiknow.com.atmncr.activity.ViewPagerActivity;
 import actiknow.com.atmncr.model.Atms;
 
 public class AllAtmAdapter extends BaseAdapter {
@@ -54,11 +55,8 @@ public class AllAtmAdapter extends BaseAdapter {
 		TextView atm_city = (TextView) convertView.findViewById (R.id.tvCity);
 		TextView atm_pincode = (TextView) convertView.findViewById (R.id.tvPincode);
 
-		// getting movie data for the row
 		final Atms atm = atms.get(position);
 
-
-		// title
 		atm_last_audit_date.setText (atm.getAtm_last_audit_date ());
 		atm_atm_unique_id.setText (atm.getAtm_unique_id ().toUpperCase ());
 		atm_bank_name.setText (atm.getAtm_bank_name ().toUpperCase ());
@@ -73,11 +71,9 @@ public class AllAtmAdapter extends BaseAdapter {
 
 			@Override
 			public void onClick (View arg0) {
-				Toast.makeText (activity, "atmid" + atm.getAtm_id (), Toast.LENGTH_SHORT).show ();
-//				Constants.atm_id = atm.getAtm_id ();
-//				Intent intent = new Intent (activity, AtmDetailsActivity.class);
-//				activity.startActivity (intent);
-//				activity.overridePendingTransition (R.anim.slide_in_right, R.anim.slide_out_left);
+				Intent intent = new Intent (activity, ViewPagerActivity.class);
+				activity.startActivity (intent);
+				activity.overridePendingTransition (R.anim.slide_in_right, R.anim.slide_out_left);
 			}
 		});
 		return convertView;

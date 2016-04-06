@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ATM Audits</string>
+    <string name="app_name">LiveAudit</string>
     <string-array name="menulist">
         <item>Home</item>
     </string-array>

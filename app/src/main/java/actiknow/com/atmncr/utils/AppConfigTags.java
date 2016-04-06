@@ -7,6 +7,7 @@ public class AppConfigTags {
     public static final String LOCALITY_NAME = "locality_name";
     public static final String SERVICE_CITY_LOCALITY_ID = "service_city_locality_id";
     public static final String ATMS = "atms";
+    public static final String QUESTIONS = "questions";
     public static final String SERVER_RESPONSE = "SERVER RESPONSE";
     public static final String DIDNT_RECEIVE_ANY_DATA_FROM_SERVER = "DIDNT RECEIVE ANY DATA FROM SERVER";
 
@@ -33,5 +34,7 @@ public class AppConfigTags {
 
     public static final String STATUS = "status";
 
+    public static final String QUESTION = "question";
+    public static final String QUESTION_ID = "question_id";
 
 }
