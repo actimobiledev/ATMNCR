@@ -9,12 +9,15 @@ import com.pixelcan.inkpageindicator.InkPageIndicator;
 import actiknow.com.atmncr.R;
 import actiknow.com.atmncr.adapter.MyPagerAdapter;
 import actiknow.com.atmncr.adapter.SmartFragmentStatePagerAdapter;
+import actiknow.com.atmncr.utils.CustomViewPager;
 
 
 public class ViewPagerActivity extends AppCompatActivity {
 
-    
-    ViewPager vpPager;
+
+    //    ViewPager vpPager;
+    CustomViewPager vpPager;
+
     InkPageIndicator inkPageIndicator;
     // ...
     private SmartFragmentStatePagerAdapter adapterViewPager;
@@ -33,6 +36,7 @@ public class ViewPagerActivity extends AppCompatActivity {
 
         inkPageIndicator.setViewPager (vpPager);
 
+
         vpPager.setClipToPadding (false);
         vpPager.setPageMargin (10);
     }
@@ -41,7 +45,7 @@ public class ViewPagerActivity extends AppCompatActivity {
     }
 
     private void initView () {
-        vpPager = (ViewPager) findViewById (R.id.vpPager);
+        vpPager = (CustomViewPager) findViewById (R.id.vpPager);
         inkPageIndicator = (InkPageIndicator) findViewById (R.id.indicator);
     }
 
@@ -73,8 +77,13 @@ public class ViewPagerActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed () {
-        finish ();
-        overridePendingTransition (R.anim.slide_in_left, R.anim.slide_out_right);
+
+        if (vpPager.getCurrentItem () > 0) {
+            vpPager.setCurrentItem (vpPager.getCurrentItem () - 1);
+        } else {
+            finish ();
+            overridePendingTransition (R.anim.slide_in_left, R.anim.slide_out_right);
+        }
     }
 
 }

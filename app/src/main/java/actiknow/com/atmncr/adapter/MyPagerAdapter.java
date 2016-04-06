@@ -24,7 +24,7 @@ public class MyPagerAdapter extends SmartFragmentStatePagerAdapter {
     @Override
     public android.support.v4.app.Fragment getItem (int position) {
         final Questions question = Constants.questionsList.get (position);
-        return Fragment.newInstance (position, question.getQuestion ());
+        return Fragment.newInstance (position, question.getQuestion (), question.getQuestion_id ());
     }
 
     // Returns the page title for the top indicator

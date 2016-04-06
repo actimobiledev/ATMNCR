@@ -40,8 +40,19 @@
         app:dotGap="8dp"
         app:pageIndicatorColor="@color/text_color_grey_dark"/>
 
+    <!--
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vpPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/indicator"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp">
+        </android.support.v4.view.ViewPager>
 
-    <android.support.v4.view.ViewPager
+        -->
+    <actiknow.com.atmncr.utils.CustomViewPager
         android:id="@+id/vpPager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -49,5 +60,5 @@
         android:gravity="center"
         android:paddingLeft="5dp"
         android:paddingRight="5dp">
-    </android.support.v4.view.ViewPager>
+    </actiknow.com.atmncr.utils.CustomViewPager>
 </RelativeLayout>
