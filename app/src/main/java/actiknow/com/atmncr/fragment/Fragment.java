@@ -7,23 +7,21 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CompoundButton;
 import android.widget.RelativeLayout;
+import android.widget.SeekBar;
 import android.widget.Switch;
 import android.widget.TextView;
 
 import actiknow.com.atmncr.R;
 
 public class Fragment extends android.support.v4.app.Fragment {
+    static boolean isLast = false;
+    RelativeLayout rlRequirements;
+    RelativeLayout rlRating;
     // Store instance variables
     private String question;
     private int question_id;
     private int page;
-
-    RelativeLayout rlRequirements;
-    RelativeLayout rlRating;
-
     private Switch switchYesNo;
-
-    static boolean isLast = false;
 
     public static Fragment newInstance (int page) {
         Fragment fragmentFirst = new Fragment ();
@@ -78,6 +76,24 @@ public class Fragment extends android.support.v4.app.Fragment {
 
         } else {
             view = inflater.inflate (R.layout.fragment_last, container, false);
+            final TextView tvRatingNumber = (TextView) view.findViewById (R.id.tvRatingNumber);
+            SeekBar sbRating = (SeekBar) view.findViewById (R.id.sbRating);
+
+
+            sbRating.setOnSeekBarChangeListener (new SeekBar.OnSeekBarChangeListener () {
+
+                public void onStopTrackingTouch (SeekBar bar) {
+                    int value = bar.getProgress (); // the value of the seekBar progress
+                }
+
+                public void onStartTrackingTouch (SeekBar bar) {
+                }
+
+                public void onProgressChanged (SeekBar bar,
+                                               int paramInt, boolean paramBoolean) {
+                    tvRatingNumber.setText ("" + paramInt / 10);
+                }
+            });
         }
         return view;
     }

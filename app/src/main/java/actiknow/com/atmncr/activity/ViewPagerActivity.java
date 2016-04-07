@@ -34,7 +34,7 @@ public class ViewPagerActivity extends AppCompatActivity {
         adapterViewPager = new MyPagerAdapter (getSupportFragmentManager ());
         vpPager.setAdapter (adapterViewPager);
 
-        inkPageIndicator.setViewPager (vpPager);
+        //      inkPageIndicator.setViewPager (vpPager);
 
 
         vpPager.setClipToPadding (false);

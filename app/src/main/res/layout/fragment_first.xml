@@ -156,31 +156,31 @@
                         android:textSize="20sp"/>
 
                     <SeekBar
-                        android:id="@+id/seekBar1"
+                        android:id="@+id/sbRating"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:progressDrawable="@drawable/red_scrubber_progress"
-                        android:thumb="@drawable/red_scrubber_control"
                         android:layout_below="@+id/tvRatingNumber"
-                        android:layout_margin="10dp"/>
+                        android:layout_margin="10dp"
+                        android:progressDrawable="@drawable/red_scrubber_progress"
+                        android:thumb="@drawable/red_scrubber_control"/>
                     <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Submit"
                         android:id="@+id/btSubmit"
-                        android:background="@drawable/bg_button"
-                        android:textColor="@color/text_color_white"
-                        android:layout_below="@+id/seekBar1"
-                        android:layout_centerHorizontal="true"/>
-                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="3"
-                        android:textSize="30sp"
+                        android:layout_below="@+id/sbRating"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/bg_button"
+                        android:text="Submit"
+                        android:textColor="@color/text_color_white"/>
+                    <TextView
                         android:id="@+id/tvRatingNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_below="@+id/tvRate"
-                        android:layout_centerHorizontal="true"/>
+                        android:layout_centerHorizontal="true"
+                        android:text="3"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textSize="30sp"/>
 
                 </RelativeLayout>
             </RelativeLayout>
