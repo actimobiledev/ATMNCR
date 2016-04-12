@@ -9,6 +9,7 @@ import android.location.LocationListener;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
+
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -66,7 +67,7 @@ import actiknow.com.atmncr.utils.NetworkConnection;
 public class MainActivity extends AppCompatActivity implements LocationListener, GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener {
 
 
-    //  karman singh
+    //  Raahul jain
 
     TextView tvNoInternetConnection;
     ProgressBar progressBar;

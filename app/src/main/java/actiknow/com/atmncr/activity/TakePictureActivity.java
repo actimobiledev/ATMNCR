@@ -55,7 +55,7 @@ import actiknow.com.atmncr.utils.Constants;
 import actiknow.com.atmncr.utils.NetworkConnection;
 
 /**
- * Created by SUDHANSHU SHARMA on 09-03-2016.
+ * Created by rahul jain on 09-03-2016.
  */
 public class TakePictureActivity extends AppCompatActivity implements LocationListener, GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener {
     Button btSubmit;
