@@ -2,7 +2,7 @@ package actiknow.com.atmncr.adapter;
 
 import android.support.v4.app.FragmentManager;
 
-import actiknow.com.atmncr.fragment.Fragment;
+import actiknow.com.atmncr.fragment.BaseFragment;
 import actiknow.com.atmncr.model.Questions;
 import actiknow.com.atmncr.utils.Constants;
 
@@ -26,10 +26,10 @@ public class MyPagerAdapter extends SmartFragmentStatePagerAdapter {
 
         if(position != NUM_ITEMS-1){
             final Questions question = Constants.questionsList.get (position);
-            return Fragment.newInstance (position, question.getQuestion (), question.getQuestion_id ());
+            return BaseFragment.newInstance (position, question.getQuestion (), question.getQuestion_id ());
         }
         else
-            return Fragment.newInstance (position);
+            return BaseFragment.newInstance (position);
     }
 
     // Returns the page title for the top indicator

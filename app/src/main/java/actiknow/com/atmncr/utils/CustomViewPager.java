@@ -8,14 +8,14 @@ import android.view.MotionEvent;
 public class CustomViewPager extends ViewPager {
 
     Context context;
-    private boolean enabled;
+    //    private boolean enabled;
     private int childId;
 
 
     public CustomViewPager (Context context, AttributeSet attrs) {
         super (context, attrs);
         this.context = context;
-        this.enabled = true;
+//        this.enabled = true;
     }
 
     public void setChildId (int childId) {
@@ -44,21 +44,23 @@ public class CustomViewPager extends ViewPager {
 
     @Override
     public boolean onTouchEvent (MotionEvent event) {
-        if (false) {
-            //       Toast.makeText (context, "Please fill in the comments first", Toast.LENGTH_SHORT).show ();
-            return true;
-
-        } else {
+        //     if (!BaseFragment.flag) {
+        //       return false;
+        //    } else {
             return super.onTouchEvent (event);
-        }
+        //     }
     }
 
     @Override
     public boolean onInterceptTouchEvent (MotionEvent event) {
+        //    if (!BaseFragment.flag) {
+        //        return false;
+        //    } else {
         return super.onInterceptTouchEvent (event);
+        //    }
     }
 
-    public void setPagingEnabled (boolean enabled) {
-        this.enabled = enabled;
-    }
+//    public void setPagingEnabled (boolean enabled) {
+//        this.enabled = enabled;
+//    }
 }

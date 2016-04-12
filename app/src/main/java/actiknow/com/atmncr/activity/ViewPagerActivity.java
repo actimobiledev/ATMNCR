@@ -9,6 +9,7 @@ import com.pixelcan.inkpageindicator.InkPageIndicator;
 import actiknow.com.atmncr.R;
 import actiknow.com.atmncr.adapter.MyPagerAdapter;
 import actiknow.com.atmncr.adapter.SmartFragmentStatePagerAdapter;
+import actiknow.com.atmncr.utils.Constants;
 import actiknow.com.atmncr.utils.CustomViewPager;
 
 
@@ -34,11 +35,11 @@ public class ViewPagerActivity extends AppCompatActivity {
         adapterViewPager = new MyPagerAdapter (getSupportFragmentManager ());
         vpPager.setAdapter (adapterViewPager);
 
-        //      inkPageIndicator.setViewPager (vpPager);
-
+//        inkPageIndicator.setViewPager (vpPager);
 
         vpPager.setClipToPadding (false);
         vpPager.setPageMargin (10);
+        vpPager.setOffscreenPageLimit (Constants.questionsList.size () - 1);
     }
 
     private void initAdapter () {
@@ -73,6 +74,23 @@ public class ViewPagerActivity extends AppCompatActivity {
                 // Code goes here
             }
         });
+
+        /*
+        vpPager.setOnTouchListener (new View.OnTouchListener () {
+
+            @Override
+            public boolean onTouch (View v, MotionEvent event) {
+                if(BaseFragment.flag)
+                    Toast.makeText (ViewPagerActivity.this, "Flag is true", Toast.LENGTH_SHORT).show ();
+                else
+                    Toast.makeText (ViewPagerActivity.this, "Flag is false", Toast.LENGTH_SHORT).show ();
+
+                return true;
+
+            }
+        });
+        */
+
     }
 
     @Override

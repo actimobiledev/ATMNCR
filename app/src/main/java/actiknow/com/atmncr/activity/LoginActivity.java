@@ -40,14 +40,10 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void initAdapter() {
-
-
     }
 
     private void initView(){
-
         tvForgetPassword = (TextView) findViewById (R.id.tvForgetPassword);
-
         etUsername = (EditText) findViewById (R.id.etUsername);
         etPassword = (EditText) findViewById (R.id.etPassword);
         btLogin = (Button) findViewById (R.id.btLogin);
