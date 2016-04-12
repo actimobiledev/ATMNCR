@@ -67,10 +67,7 @@ import actiknow.com.atmncr.utils.NetworkConnection;
 public class MainActivity extends AppCompatActivity implements LocationListener, GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener {
 
 
-    //  Raahul jain
-    //karman singh1
-
-    // actiknow
+  //karman
 
     TextView tvNoInternetConnection;
     ProgressBar progressBar;
