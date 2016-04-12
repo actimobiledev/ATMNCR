@@ -69,6 +69,8 @@ public class MainActivity extends AppCompatActivity implements LocationListener,
 
   //karman 12324324346654465464646
 
+    //karman2
+
     TextView tvNoInternetConnection;
     ProgressBar progressBar;
     ListView listViewAllAtms;
